@@ -1,0 +1,6 @@
+{
+  "name":"Hypercube",
+  "descriptions":["Animation of a hyper cube"],
+  "entry_point":"level.lua",
+  "has_score_leaderboard":false
+}
