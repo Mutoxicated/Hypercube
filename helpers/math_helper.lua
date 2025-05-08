@@ -1,16 +1,5 @@
 local cp = require("/dynamic/helpers/color_helper.lua")
 
--- alias Parameter = struct{number x, y, ParamType pt}
--- alias Parameters = list<Parameter>
-
--- pub SineWave = [
---     struct{x, y = 0, 0     ; pt = ParamType.Linear},
---     struct{x, y = 0.25, 0.5; pt = ParamType.Linear},
---     struct{x, y = 0.5, 1   ; pt = ParamType.Rooted},
---     struct{x, y = 0.75, 0.5; pt = ParamType.Rooted},
---     struct{x, y = 1, 0     ; pt = ParamType.Linear}
--- ]
-
 local mh = {}
 
 function mh.clamp(min, max, v) 
@@ -36,9 +25,9 @@ end
 function mh.lerp(a, b, t, inter) 
     local inter_type = inter or 0
     if inter == 1 then
-        t = t^1.5
+        t = t^1.5 -- it aint ^2 cuz it just dont look good
     elseif inter == 2 then
-        t = t^0.9
+        t = t^0.9 -- same thing here
     end
     return a+(b-a)*t
 end

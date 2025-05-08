@@ -49,8 +49,6 @@ for i = 1, HYPERCUBE_FRAMES do
 
     local offset2 = m.wrap(0,1,time+0.75)
     gfx.add_poly(frames[i], {m.lerp_map(offset2, pos_map), 0, 0}, 4, m.lerp_map_color(offset2, color_map), m.lerp_map(offset2, size_map))
-    
-    
 end
 
 

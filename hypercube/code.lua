@@ -1,4 +1,3 @@
-
 local hc = {}
 
 function hc.new(x, y, rotate) 

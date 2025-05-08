@@ -1,5 +1,4 @@
 require("/dynamic/hypercube/settings.lua")
-local ph = require("/dynamic/helpers/player_helper.lua")
 local hc = require("/dynamic/hypercube/code.lua")
 
 --local size = 1000fx
