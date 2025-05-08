@@ -10,7 +10,8 @@ local hc = require("/dynamic/hypercube/code.lua")
 pewpew.configure_player(0, {camera_distance = -300fx})
 
 local function hypercube_initiate() 
-    hc.new(100fx,100fx)
+    hc.new(100fx,0fx, true)
+    hc.new(-100fx,0fx, false)
 end
 
 hypercube_initiate()

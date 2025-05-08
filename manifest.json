@@ -1,6 +1,6 @@
 {
   "name":"Hypercube",
-  "descriptions":["Animation of a hyper cube"],
+  "descriptions":["Animation of a hyper cube, aka tesseract"],
   "entry_point":"level.lua",
   "has_score_leaderboard":false
 }

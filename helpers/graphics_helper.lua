@@ -37,29 +37,23 @@ function helper.add_line_to_mesh(mesh, vertexes, colors, close_loop)
   table.insert(mesh.segments, segments)
 end
 
-function helper.add_poly(mesh, center, sides, color, radius, height)
+function helper.add_poly(mesh, center, sides, color, radius)
   if sides > 2 then
     local x = center[1]
     local y = center[2]
     local z = center[3]
     local vertices = {} 
-    local vertices2 = {} 
     local colors = {}
 
     --Plots the vertices
     for i = 1, sides do
       local angle = (math.pi * 2 * i)/sides
-      table.insert(vertices, {x + radius * math.cos(angle),y + radius * math.sin(angle), z + height})
-      table.insert(vertices2, {x + radius * math.cos(angle),y + radius * math.sin(angle), z - height})
+      table.insert(vertices, {x, y + radius * math.sin(angle), z + radius * math.cos(angle)})
       table.insert(colors, color)
     end
 
     --Draws the segments between each vertex
     helper.add_line_to_mesh(mesh, vertices, colors ,true)
-    helper.add_line_to_mesh(mesh, vertices2, colors ,true)
-    for i = 1, sides do
-      helper.add_line_to_mesh(mesh, {vertices[i], vertices2[i]}, {color,color})
-    end
   end
 end
 
